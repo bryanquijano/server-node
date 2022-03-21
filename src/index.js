@@ -1,10 +1,10 @@
 import express from 'express';
+import config from './utils/config';
 
 const app = express();
-const port = 3000;
 
 app.get('/', (req, res) => {
   res.send({ msg: 'hello there' });
 });
 
-app.listen(port);
+app.listen(config.port);
